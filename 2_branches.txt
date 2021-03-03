@@ -18,3 +18,15 @@ git checkout -b <branch-name>
 
 before to switch to a branch, commit or stash changes
 
+deleting branches
+git branch -d <branch-name> deletes a branch
+git branch --delete <branch-name> deletes a branch
+
+this when deleting unmerged branches, this deletes ALL data in named branch forever
+is recomended to merge a branch before deleting
+git branch -D <branch-name> deletes a branch
+git branch --delete --force <branch-name> deletes a branch
+
+renaming branches
+we only rename from the branch tha want to rename
+git branch -m <new-banch-name>
