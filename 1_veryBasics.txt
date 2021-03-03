@@ -1,0 +1,6 @@
+to check if files/folders are added, removed or modified:
+git status
+
+to add files to the stage previous to commit:
+git add <file1> <file2>
+
