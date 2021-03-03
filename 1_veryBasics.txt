@@ -19,3 +19,12 @@ git log --oneline <- to view small commit number & commit message
 
 to correct previous commit (previosuly git add <files>)
 git commit --amend
+
+create .gitignore:
+In this file we puts, secrets, API keys, credentials, etc.
+also dependencies & packages, system files, logs
+Files that never want to commit
+for example:
+.DS_Store    will ignore files with that name
+folderName/  will ignore an entire directory
+*.log        will ignore any files with the .log extension
