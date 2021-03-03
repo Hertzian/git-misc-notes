@@ -3,4 +3,9 @@ git status
 
 to add files to the stage previous to commit:
 git add <file1> <file2>
+git add . <- add all files to stage
+
+retrieves info about log of the commits in repo
+retrieves info about log of the commits in repo
+git log
 
