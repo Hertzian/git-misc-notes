@@ -7,3 +7,14 @@ git branch <branch-name>
 once you have branches, use switch to switch to it
 git switch <branch-name>
 
+use switch to create a new branch and switch to it
+git switch -c <branch-name>
+
+also git checkout can switch & create branches:
+git checkout <branch-name> <- switch to branch
+
+create new branch & switch to it
+git checkout -b <branch-name>
+
+before to switch to a branch, commit or stash changes
+
