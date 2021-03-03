@@ -12,6 +12,7 @@ git log
 to commit chages:
 git commit -m <- for short message
 git commit <- opens text editor to write message, can be a long one
+git commit -am <- shortcut when modified file, this commit & write messages, without stagging
 
 to check commits, messages, author & email
 git log

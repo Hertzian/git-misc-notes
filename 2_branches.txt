@@ -1,0 +1,9 @@
+to view all the existing branches,
+git branch
+
+create a new branch and do NOT switch to them
+git branch <branch-name>
+
+once you have branches, use switch to switch to it
+git switch <branch-name>
+
