@@ -1,6 +1,9 @@
 to view all the existing branches,
 git branch
 
+to view all existing branches with name, commit number and commit msg
+git branch -v
+
 create a new branch and do NOT switch to them
 git branch <branch-name>
 

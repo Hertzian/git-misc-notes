@@ -1,0 +1,17 @@
+to merge one branch into another, we need to be into receiving branch 
+this to attemp a fast forward merge
+git switch <receiving-branch>
+git merge <merging-branch>
+
+sometimes is necesary when merge, to add a 'merge commit' this happens
+when the <receiving-branch> has more commits than the <merging-branch>
+this commit, git do it automatically if doesnt have any conflicts
+
+Resolving conflicts
+Whenever you encounter merve conflicts, follow these steps:
+
+1.-Open up the file(s) with merge conflicts.
+2.-Edit the file(s) to remove the conflicts. Decide which branch's content
+you want to keep in each conflict. Or keep the content from both.
+3.-Remove the conflict 'markers' in the document.
+4.-Add your changes an then make a commit!
