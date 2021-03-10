@@ -39,3 +39,13 @@ commits in question.
 git diff commit1..commit2
 or
 git diff commit1 commit2
+
+To compare HEAD to previous commit (it works with any number, just need to 
+exists that commit)
+git diff HEAD HEAD~1
+or
+git diff HEAD~1
+or
+git diff commit-hash
+or
+git diff HEAD commit-hash
