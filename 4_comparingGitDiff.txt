@@ -31,6 +31,9 @@ git diff branch1..branch2
 or
 git diff branch1 branch2
 
+to compare one file between two diferent branches
+git diff branch1 branch2 <filename>
+
 To compare two commits, provide fit diff with the commit hashes of the
 commits in question.
 git diff commit1..commit2
