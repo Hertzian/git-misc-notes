@@ -1,0 +1,31 @@
+Stashing
+Git provides an easy way of stashing these uncommitted changes so that we can return to them
+later, without having to make unnecessary commits.
+
+Running git stash will take all uncommitted changes (staged & unstaged) and stash them,
+reverting the changes in your working copy
+git stash
+or
+git stash save
+
+To remove the most recently stashed changes in your stash and re-apply them to your working
+copy.
+git stash pop
+
+To apply whatever is stashed away, without removing it from the stash. This can be useful if
+you want to apply stashed changes to multiple branches.
+git stash apply
+
+to view all stashes
+git stash list
+
+applying specific stashes
+Git assumes you wantto apply themost recent stash when you run git stash apply, but you can
+also specify a particular stash git stash apply stash@{2}
+git stash apply stash@{2} <-- when {2} is the number in the stash stack
+
+To Delete a particular stash, you can use
+git stash drop <stash-id>
+
+To clear out all stashes
+git stash clear
