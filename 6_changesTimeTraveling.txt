@@ -28,7 +28,7 @@ Another option
 git checkout -- <filename> (can be multiple files)
 
 Yet another option using restore
-to restore the tile to the contents in the HEAD
+to restore/remove the tile to the contents in the HEAD
 git restore <filename>
 
 restores using HEAD as the default source, but we can change that using the --source option
@@ -36,3 +36,34 @@ For example
 git --source HEAD~1 home.html, will restore the contents of home.html to its state from the
 commito prior to HEAD. You can also use a particular commit hash as the source.
 git --source <commit-hash or HEAD~n> <filename(s)>
+
+to remove file(s) from stagin
+git restore --staged <filename(s)>
+
+Suppose you've just made a couple of commits on the master branch, but you actually meant to
+make them on a separate branch instead. To undo those commits, this will reset the repo back 
+to a specific commit. The commits are gone but changes are not
+git reset <commit-hash>
+
+If you want to undo both the commits AND the actual changes in your files, you can use the
+--hard option.
+to delete the last commit and associated changes
+git reset --hard <commit-hash> 
+or
+git reset --hard HEAD~1 (or any existing number)
+
+Git revert
+Is similar to git reset in that they both 'undo' changes, but they  acoomplish it in
+different ways.
+git reset moves the branch pointer backwards, eliminating commits.
+git revert instead creates a brand new commit which reverses/undos the changes from a commit.
+Because it results in a new commit, you will be prompted to enter a commit message.
+git revert <commit-hash>
+or
+git revert HEAD~1 (or any existing number)
+
+IMPORTANT!
+If you want to reverse some commits that other people already have on their machines, you
+should use revert.
+If you want to reverse commits that you haven't shared with others, use reset and no one 
+will ever know!
