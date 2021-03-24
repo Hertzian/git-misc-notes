@@ -14,4 +14,25 @@ Poke around, view the files, etc.
 3.Create a new branch and switch to it. You can now make and save changes, since HEAD is
 no longer detached.
 
+to refer to previous commit relative to a particular one
+git checkout HEAD~1 (can be HEAD~n)
 
+to return to the original position
+git switch -
+
+Discarding changes
+to discard any changes in that file, reverting back to the HEAD
+git checkout HEAD <filename> (can be multiple files)
+
+Another option
+git checkout -- <filename> (can be multiple files)
+
+Yet another option using restore
+to restore the tile to the contents in the HEAD
+git restore <filename>
+
+restores using HEAD as the default source, but we can change that using the --source option
+For example
+git --source HEAD~1 home.html, will restore the contents of home.html to its state from the
+commito prior to HEAD. You can also use a particular commit hash as the source.
+git --source <commit-hash or HEAD~n> <filename(s)>
