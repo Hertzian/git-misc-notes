@@ -1,0 +1,77 @@
+To view all the remote branches
+and this show all the branches in remote repo
+git branch -r
+
+When you put:
+git status
+Appears a message of my actual branch, and with what
+remote branch has relation, if they have commits ahead or if
+my branch is up to date.
+
+I'm be able to se the content of the remote branches with
+git checkout <remote>/<remote-branch>
+BUT is with detached HEAD
+
+The easyest way to switch and makes a local branch with the 
+same content than the remote, and track the remote branch is:
+git switch <remote-branch-name>
+
+The old way of doing this is:
+git checkout --track <remote-name>/<remote-branch-name>
+
+Fetching
+
+Fetching allows us to download changes from a remote
+repo, BUT those changes will NOT be automatically
+integrated into our working files.
+
+It let syou see what others have been working on, without
+having to merge those changes into your local repo.
+
+Think of it as "please go and get the latest info from 
+github, but don't screw up my working directory"
+
+To fetch branches and history from a specific remote repo,
+and only updates tracking branches.
+git fetch <remote>
+If not especified, <remote> defaults to origin
+And this fetch the ENTIRE remote
+
+Can also fetch a specific branch from a remote using:
+git fetch <remote> <branch-name>
+This only fetch the remote branch
+
+fetch:
+-get changes from remote branch(es)
+-updates the remote-tracking branches with new changes
+-does not merge changes into your current HEAD branch
+-safe to do at anytime
+
+Pull
+
+(this is just an example)
+git pull = git fetch + git merge
+Update the remote tracking branch with the latest changes from remote
+Update current local branch with remote tracking branch
+
+To pull a particular remote an branch
+git pull <remote>/<remote-branch> <local-branch>
+Like merge, it matters WHERE we run this command from.
+
+Without specifying a particular remote or branch to pull from,
+git assumes:
+- remote branch will default to origin
+- branch will default to whatever tracking connection is
+configured for your current branch.
+git pull
+
+note:
+This can be configured and tracking connections,
+most people don't do this
+
+pull:
+-get changes from remote branches
+-updates the current branch with the new changes, merging them in
+-can result in merge conflicts
+-not recommended if you have uncommitted changes
+
