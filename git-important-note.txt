@@ -9,3 +9,6 @@ your configuration file:
 After doing this, you may fix the identity used for this commit with:
 
     git commit --amend --reset-author
+
+To configure the default name of the main branch instead of master
+git config --global init.defaultBranch <branch-name>
